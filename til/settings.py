@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
     'feed',
     'profiles',
+    'followers',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -162,8 +163,11 @@ AUTHENTICATION_BACKENDS = (
     "allauth.account.auth_backends.AuthenticationBackend"
 )
 
-STATICFILED_DIRS = [
-    os.path.join(PROJECT_DIR, "frontend/")
+STATICFILES_DIRS = [
+    os.path.join(PROJECT_DIR, "frontend/"),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATIC_URL = "/static/"
+
+UZE_TZ = True
+TIME_ZONE = 'EST5EDT'
